@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clients – MC Digital Solution</title>
+  <meta name="description" content="See who trusts MC Digital Solution for their water purifier needs. Testimonials, client logos, and case studies from happy customers across Tamil Nadu." />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .testimonials-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 28px; }
+    .brands-strip { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; align-items: center; margin-top: 40px; }
+    .brand-pill { background: white; border: 1.5px solid var(--gray-200); border-radius: 50px; padding: 10px 28px; font-weight: 600; font-size: 0.9rem; color: var(--gray-700); transition: var(--transition); }
+    .brand-pill:hover { border-color: var(--primary); color: var(--primary); transform: translateY(-2px); box-shadow: var(--shadow-sm); }
+    .stats-row { display: grid; grid-template-columns: repeat(4,1fr); gap: 28px; }
+    .stat-box { text-align: center; padding: 36px 20px; background: white; border-radius: 16px; border: 1px solid var(--gray-200); }
+    .stat-box .num { font-family:'Outfit',sans-serif; font-size: 2.8rem; font-weight: 800; color: var(--primary); }
+    .stat-box .lbl { font-size: 0.875rem; color: var(--gray-500); font-weight: 500; }
+    @media(max-width:900px){ .testimonials-grid { grid-template-columns: 1fr; } .stats-row { grid-template-columns: repeat(2,1fr); } }
+  </style>
+</head>
+<body>
+<nav class="navbar" id="navbar">
+  <div class="container">
+    <a href="index.html" class="logo">
+      <div class="logo-icon"><svg viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm0 18c-4.4 0-8-3.6-8-8s3.6-8 8-8 8 3.6 8 8-3.6 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z" fill="white"/></svg></div>
+      <div class="logo-text"><span class="brand">MC Digital Solution</span><span class="tagline">Water Purifier Experts</span></div>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="clients.html" class="active">Clients</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="contact.html" class="nav-cta">Get a Quote</a></li>
+    </ul>
+    <div class="nav-toggle" onclick="toggleNav()"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Home</a> / Clients</div>
+    <h1>Our Clients</h1>
+    <p>Trusted by hundreds of homes, businesses, and institutions across Tamil Nadu.</p>
+  </div>
+</section>
+
+<section class="section" style="background:var(--gray-50);">
+  <div class="container">
+    <div class="section-header animate">
+      <div class="badge">Numbers Don't Lie</div>
+      <h2>Our Track Record</h2>
+    </div>
+    <div class="stats-row">
+      <div class="stat-box animate"><div class="num">500+</div><div class="lbl">Happy Clients</div></div>
+      <div class="stat-box animate"><div class="num">1200+</div><div class="lbl">Service Calls Completed</div></div>
+      <div class="stat-box animate"><div class="num">98%</div><div class="lbl">Satisfaction Rate</div></div>
+      <div class="stat-box animate"><div class="num">5+</div><div class="lbl">Years in Business</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background:white;">
+  <div class="container">
+    <div class="section-header animate">
+      <div class="badge">Testimonials</div>
+      <h2>What Our Clients Say</h2>
+      <p>Real words from real people who trust us with their water.</p>
+    </div>
+    <div class="testimonials-grid">
+      <div class="client-card animate"><div class="stars">★★★★★</div><p class="quote">"MC Digital Solution installed our office RO in just 2 hours. Professional, clean work. Highly recommend to any business!"</p><div class="client-info"><div class="client-avatar">RS</div><div><div class="client-name">Rajesh Sharma</div><div class="client-role">Office Manager, Coimbatore</div></div></div></div>
+      <div class="client-card animate"><div class="stars">★★★★★</div><p class="quote">"Fixed a persistent leak other technicians couldn't solve. Used genuine parts and gave a 90-day warranty. Excellent service!"</p><div class="client-info"><div class="client-avatar">PK</div><div><div class="client-name">Priya Kumar</div><div class="client-role">Homeowner, Salem</div></div></div></div>
+      <div class="client-card animate"><div class="stars">★★★★★</div><p class="quote">"Our restaurant relies on clean water every day. MC Digital Solution handles all our commercial RO maintenance. Never had an issue in 2 years."</p><div class="client-info"><div class="client-avatar">AM</div><div><div class="client-name">Arun Murugan</div><div class="client-role">Restaurant Owner, Erode</div></div></div></div>
+      <div class="client-card animate"><div class="stars">★★★★★</div><p class="quote">"The AMC Standard plan is worth every rupee. Four service visits, priority support, and they fixed my pump for free. Outstanding value."</p><div class="client-info"><div class="client-avatar">SL</div><div><div class="client-name">Sudha Lakshmi</div><div class="client-role">Apartment Resident, Tirupur</div></div></div></div>
+      <div class="client-card animate"><div class="stars">★★★★★</div><p class="quote">"Transparent pricing, no surprises. They quoted ₹850 for the membrane — that was the final bill. I've recommended them to all my neighbors."</p><div class="client-info"><div class="client-avatar">VR</div><div><div class="client-name">Venkat Raman</div><div class="client-role">Engineer, Coimbatore</div></div></div></div>
+      <div class="client-card animate"><div class="stars">★★★★★</div><p class="quote">"Called at 6 PM for an emergency repair. Their technician arrived within 90 minutes. Problem solved same evening. Remarkable service!"</p><div class="client-info"><div class="client-avatar">MN</div><div><div class="client-name">Meena Nair</div><div class="client-role">School Principal, Salem</div></div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background:var(--gray-50);">
+  <div class="container">
+    <div class="section-header animate">
+      <div class="badge">Brands We Service</div>
+      <h2>We Support All Major Brands</h2>
+      <p>Our certified technicians are trained to install, repair, and maintain all leading water purifier brands.</p>
+    </div>
+    <div class="brands-strip">
+      <div class="brand-pill">Kent RO</div>
+      <div class="brand-pill">Aquaguard</div>
+      <div class="brand-pill">Pureit</div>
+      <div class="brand-pill">Blue Star</div>
+      <div class="brand-pill">LG PuriCare</div>
+      <div class="brand-pill">A.O. Smith</div>
+      <div class="brand-pill">Livpure</div>
+      <div class="brand-pill">HUL</div>
+      <div class="brand-pill">Havells</div>
+      <div class="brand-pill">V-Guard</div>
+      <div class="brand-pill">Tata Swach</div>
+      <div class="brand-pill">Others</div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-banner">
+  <div class="container">
+    <div class="cta-content">
+      <h2>Join Our Growing Client Family</h2>
+      <p>Experience the MC Digital Solution difference — expert service, transparent pricing, guaranteed quality.</p>
+      <div class="cta-buttons">
+        <a href="contact.html" class="btn btn-white">Book a Service</a>
+        <a href="https://wa.me/919876543210" target="_blank" class="whatsapp-btn"><svg viewBox="0 0 24 24" width="20" height="20" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> WhatsApp Us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-main"><div class="container"><div class="footer-grid">
+    <div class="footer-brand"><a href="index.html" class="logo"><div class="logo-icon"><svg viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm0 18c-4.4 0-8-3.6-8-8s3.6-8 8-8 8 3.6 8 8-3.6 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z" fill="white"/></svg></div><div class="logo-text"><span class="brand">MC Digital Solution</span><span class="tagline">Water Purifier Experts</span></div></a><p>Pure water solutions across Tamil Nadu.</p></div>
+    <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="clients.html">Clients</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div class="footer-col"><h4>Services</h4><ul><li><a href="services.html">RO Installation</a></li><li><a href="services.html">AMC Plans</a></li><li><a href="services.html">Repair</a></li><li><a href="services.html">Commercial RO</a></li></ul></div>
+    <div class="footer-col"><h4>Contact</h4><ul class="footer-contact"><li><span>📞</span><span>+91 98765 43210</span></li><li><span>📧</span><span>info@mcdigitalsolution.in</span></li><li><span>📍</span><span>Coimbatore, Tamil Nadu</span></li></ul></div>
+  </div></div></div>
+  <div class="container"><div class="footer-bottom"><span>© 2025 MC Digital Solution. All rights reserved.</span><span>Designed with ❤️</span></div></div>
+</footer>
+<div class="whatsapp-float"><a href="https://wa.me/919876543210" target="_blank"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" fill="white"/></svg> WhatsApp Us</a></div>
+<script src="js/main.js"></script>
+</body>
+</html>
