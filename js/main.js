@@ -59,34 +59,65 @@ const observer = new IntersectionObserver((entries) => {
 animatables.forEach(el => observer.observe(el));
 
 // ---- Contact form submission ----
-function handleSubmit(e) {
+async function handleSubmit(e) {
   e.preventDefault();
+  const form = e.target;
   const btn = document.getElementById('submitBtn');
   const success = document.getElementById('formSuccess');
+  const action = form.getAttribute('action');
+
+  if (!action || action.includes('your_form_id_here')) {
+    alert('Please configure your Formspree ID in the HTML action attribute.');
+    return;
+  }
 
   // Show loading
   btn.textContent = 'Sending...';
   btn.disabled = true;
   btn.style.opacity = '0.7';
 
-  // Simulate async submission
-  setTimeout(() => {
-    btn.textContent = 'Message Sent ✅';
-    btn.style.background = 'linear-gradient(135deg, #10b981, #059669)';
-    if (success) {
-      success.style.display = 'block';
-    }
-    // Reset form fields
-    e.target.reset();
-    // Re-enable after delay
-    setTimeout(() => {
+  try {
+    const response = await fetch(action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: {
+        'Accept': 'application/json'
+      }
+    });
+
+    if (response.ok) {
+      btn.textContent = 'Message Sent ✅';
+      btn.style.background = 'linear-gradient(135deg, #10b981, #059669)';
+      if (success) {
+        success.style.display = 'block';
+      }
+      form.reset();
+      
+      // Reset button after delay
+      setTimeout(() => {
+        btn.textContent = 'Send Message 🚀';
+        btn.disabled = false;
+        btn.style.opacity = '';
+        btn.style.background = '';
+        if (success) success.style.display = 'none';
+      }, 5000);
+    } else {
+      const data = await response.json();
+      if (Object.hasOwn(data, 'errors')) {
+        alert(data["errors"].map(error => error["message"]).join(", "));
+      } else {
+        alert("Oops! There was a problem submitting your form");
+      }
       btn.textContent = 'Send Message 🚀';
       btn.disabled = false;
       btn.style.opacity = '';
-      btn.style.background = '';
-      if (success) success.style.display = 'none';
-    }, 5000);
-  }, 1200);
+    }
+  } catch (error) {
+    alert("Oops! There was a problem submitting your form");
+    btn.textContent = 'Send Message 🚀';
+    btn.disabled = false;
+    btn.style.opacity = '';
+  }
 }
 
 // ---- FAQ accordion ----

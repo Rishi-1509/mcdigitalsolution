@@ -147,30 +147,29 @@
           <h3 style="font-size:1.4rem;margin-bottom:8px;color:var(--gray-900);">Send Us a Message</h3>
           <p style="font-size:0.875rem;margin-bottom:28px;">Fill in your details and we'll get back to you within 2
             hours on business days.</p>
-          <form id="contactForm" onsubmit="handleSubmit(event)">
+          <form id="contactForm" action="https://formspree.io/f/mbdwgeze" method="POST" onsubmit="handleSubmit(event)">
             <div class="form-row">
-              <div class="form-group"><label for="name">Full Name *</label><input type="text" id="name"
+              <div class="form-group"><label for="name">Full Name *</label><input type="text" id="name" name="name"
                   placeholder="Your full name" required /></div>
-              <div class="form-group"><label for="phone">Phone Number *</label><input type="tel" id="phone"
+              <div class="form-group"><label for="phone">Phone Number *</label><input type="tel" id="phone" name="phone"
                   placeholder="+91 XXXXX XXXXX" required /></div>
             </div>
-            <div class="form-group"><label for="email">Email Address</label><input type="email" id="email"
+            <div class="form-group"><label for="email">Email Address</label><input type="email" id="email" name="email"
                 placeholder="you@example.com" /></div>
             <div class="form-group"><label for="service">Service Required *</label>
-              <select id="service" required>
+              <select id="service" name="service" required>
                 <option value="">Select a service...</option>
                 <option>RO Water Purifier Installation</option>
                 <option>Filter / Membrane Replacement</option>
                 <option>Repair &amp; Servicing</option>
-
                 <option>Free Consultation</option>
                 <option>Other</option>
               </select>
             </div>
-            <div class="form-group"><label for="city">Your City</label><input type="text" id="city"
+            <div class="form-group"><label for="city">Your City</label><input type="text" id="city" name="city"
                 placeholder="e.g. Choolaimedu, Villivakkam..." /></div>
             <div class="form-group"><label for="message">Message / Additional Details</label><textarea id="message"
-                placeholder="Tell us more about your requirement, purifier brand, current issue, etc."
+                name="message" placeholder="Tell us more about your requirement, purifier brand, current issue, etc."
                 style="min-height:140px;"></textarea></div>
             <button type="submit" id="submitBtn" class="btn btn-primary"
               style="width:100%;justify-content:center;font-size:1rem;">Send Message </button>
