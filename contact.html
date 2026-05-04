@@ -1,136 +1,304 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact Us – MC Digital Solution</title>
-  <meta name="description" content="Contact MC Digital Solution for water purifier installation, repair, or AMC enquiries. Call, WhatsApp, or fill the form." />
+  <meta name="description"
+    content="Contact MC Digital Solution for water purifier installation, repair, or AMC enquiries. Call, WhatsApp, or fill the form." />
   <link rel="stylesheet" href="css/style.css" />
   <style>
-    .map-placeholder { background: linear-gradient(135deg, #e0f0ff, #cce8ff); border-radius: 16px; height: 280px; display: flex; align-items: center; justify-content: center; font-size: 3rem; margin-top: 32px; border: 2px dashed var(--gray-200); flex-direction: column; gap: 12px; color: var(--gray-500); font-size: 1rem; }
-    .faq-item { border: 1px solid var(--gray-200); border-radius: 12px; margin-bottom: 12px; overflow: hidden; }
-    .faq-q { padding: 18px 24px; font-weight: 600; font-size: 0.95rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; color: var(--gray-900); background: white; transition: var(--transition); }
-    .faq-q:hover { background: var(--gray-50); }
-    .faq-a { padding: 0 24px; max-height: 0; overflow: hidden; transition: max-height 0.35s ease, padding 0.35s ease; font-size: 0.875rem; color: var(--gray-500); background: white; }
-    .faq-a.open { max-height: 200px; padding: 0 24px 18px; }
-    .faq-arrow { transition: var(--transition); }
-    .faq-arrow.rotated { transform: rotate(180deg); }
+    .map-placeholder {
+      background: linear-gradient(135deg, #e0f0ff, #cce8ff);
+      border-radius: 16px;
+      height: 280px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+      margin-top: 32px;
+      border: 2px dashed var(--gray-200);
+      flex-direction: column;
+      gap: 12px;
+      color: var(--gray-500);
+      font-size: 1rem;
+    }
+
+    .faq-item {
+      border: 1px solid var(--gray-200);
+      border-radius: 12px;
+      margin-bottom: 12px;
+      overflow: hidden;
+    }
+
+    .faq-q {
+      padding: 18px 24px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: var(--gray-900);
+      background: white;
+      transition: var(--transition);
+    }
+
+    .faq-q:hover {
+      background: var(--gray-50);
+    }
+
+    .faq-a {
+      padding: 0 24px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease, padding 0.35s ease;
+      font-size: 0.875rem;
+      color: var(--gray-500);
+      background: white;
+    }
+
+    .faq-a.open {
+      max-height: 200px;
+      padding: 0 24px 18px;
+    }
+
+    .faq-arrow {
+      transition: var(--transition);
+    }
+
+    .faq-arrow.rotated {
+      transform: rotate(180deg);
+    }
   </style>
 </head>
+
 <body>
-<nav class="navbar" id="navbar">
-  <div class="container">
-    <a href="index.html" class="logo">
-      <div class="logo-icon"><svg viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm0 18c-4.4 0-8-3.6-8-8s3.6-8 8-8 8 3.6 8 8-3.6 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z" fill="white"/></svg></div>
-      <div class="logo-text"><span class="brand">MC Digital Solution</span><span class="tagline">Water Purifier Experts</span></div>
-    </a>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="clients.html">Clients</a></li>
-      <li><a href="contact.html" class="active">Contact</a></li>
-      <li><a href="contact.html" class="nav-cta">Get a Quote</a></li>
-    </ul>
-    <div class="nav-toggle" onclick="toggleNav()"><span></span><span></span><span></span></div>
-  </div>
-</nav>
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <div class="logo-icon"><svg viewBox="0 0 24 24">
+            <path
+              d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm0 18c-4.4 0-8-3.6-8-8s3.6-8 8-8 8 3.6 8 8-3.6 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"
+              fill="white" />
+          </svg></div>
+        <div class="logo-text"><span class="brand">MC Digital Solution</span><span class="tagline">Water Purifier
+            Experts</span></div>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="clients.html">Clients</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+        <li><a href="contact.html" class="nav-cta">Get a Quote</a></li>
+      </ul>
+      <div class="nav-toggle" onclick="toggleNav()"><span></span><span></span><span></span></div>
+    </div>
+  </nav>
 
-<section class="page-hero">
-  <div class="container">
-    <div class="breadcrumb"><a href="index.html">Home</a> / Contact</div>
-    <h1>Contact Us</h1>
-    <p>We're here to help. Reach out through any channel — we respond fast.</p>
-  </div>
-</section>
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">Home</a> / Contact</div>
+      <h1>Contact Us</h1>
+      <p>We're here to help. Reach out through any channel — we respond fast.</p>
+    </div>
+  </section>
 
-<section class="section contact-section">
-  <div class="container">
-    <div class="contact-grid">
-      <div class="contact-info animate">
-        <div class="badge">Get In Touch</div>
-        <h3>We're Just a Call Away</h3>
-        <p style="margin-bottom:32px;">Whether you need a new installation, filter change, or emergency repair — reach out and we'll get back to you within 2 hours.</p>
-        <div class="contact-detail"><div class="detail-icon">📞</div><div class="detail-text"><strong>Phone / WhatsApp</strong><span>+91 97919 13566</span></div></div>
-        <div class="contact-detail"><div class="detail-icon">📧</div><div class="detail-text"><strong>Email</strong><span>lokesh@mcdigitalsolutions.in</span></div></div>
-        <div class="contact-detail"><div class="detail-icon">📍</div><div class="detail-text"><strong>Head Office</strong><span>10/1/2/1, Rajaji Nagar, Villivakkam, Chennai, Tamil Nadu 600049</span></div></div>
-        <div class="contact-detail"><div class="detail-icon">🕐</div><div class="detail-text"><strong>Working Hours</strong><span>10 am to 6:30 pm</span></div></div>
-        <div class="contact-detail"><div class="detail-icon">🗺️</div><div class="detail-text"><strong>Service Areas</strong><span>All over Chennai</span></div></div>
-        <a href="https://maps.google.com/?q=10/1/2/1,+Rajaji+Nagar,+Villivakkam,+Chennai,+Tamil+Nadu+600049" target="_blank" class="map-placeholder" style="text-decoration:none; color:inherit;">
-          <span>🗺️</span>
-          <span>Open in Google Maps</span>
-          <span style="font-size:0.8rem;color:var(--gray-500);text-align:center;">10/1/2/1, Rajaji Nagar, Villivakkam, Chennai, Tamil Nadu 600049</span>
-        </a>
-      </div>
-      <div class="contact-form animate">
-        <h3 style="font-size:1.4rem;margin-bottom:8px;color:var(--gray-900);">Send Us a Message</h3>
-        <p style="font-size:0.875rem;margin-bottom:28px;">Fill in your details and we'll get back to you within 2 hours on business days.</p>
-        <form id="contactForm" onsubmit="handleSubmit(event)">
-          <div class="form-row">
-            <div class="form-group"><label for="name">Full Name *</label><input type="text" id="name" placeholder="Your full name" required /></div>
-            <div class="form-group"><label for="phone">Phone Number *</label><input type="tel" id="phone" placeholder="+91 XXXXX XXXXX" required /></div>
+  <section class="section contact-section">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info animate">
+          <div class="badge">Get In Touch</div>
+          <h3>We're Just a Call Away</h3>
+          <p style="margin-bottom:32px;">Whether you need a new installation, filter change, or emergency repair — reach
+            out and we'll get back to you within 2 hours.</p>
+          <div class="contact-detail">
+            <div class="detail-icon">📞</div>
+            <div class="detail-text"><strong>Phone / WhatsApp</strong><span>+91 97919 13566</span></div>
           </div>
-          <div class="form-group"><label for="email">Email Address</label><input type="email" id="email" placeholder="you@example.com" /></div>
-          <div class="form-group"><label for="service">Service Required *</label>
-            <select id="service" required>
-              <option value="">Select a service...</option>
-              <option>RO Water Purifier Installation</option>
-              <option>Filter / Membrane Replacement</option>
-              <option>Repair &amp; Servicing</option>
-              
-              <option>Free Consultation</option>
-              <option>Other</option>
-            </select>
+          <div class="contact-detail">
+            <div class="detail-icon">📧</div>
+            <div class="detail-text"><strong>Email</strong><span>lokesh@mcdigitalsolutions.in</span></div>
           </div>
-          <div class="form-group"><label for="city">Your City</label><input type="text" id="city" placeholder="e.g. Coimbatore, Salem..." /></div>
-          <div class="form-group"><label for="message">Message / Additional Details</label><textarea id="message" placeholder="Tell us more about your requirement, purifier brand, current issue, etc." style="min-height:140px;"></textarea></div>
-          <button type="submit" id="submitBtn" class="btn btn-primary" style="width:100%;justify-content:center;font-size:1rem;">Send Message 🚀</button>
-          <div class="form-success" id="formSuccess">✅ Message sent! We'll contact you within 2 hours.</div>
-        </form>
+          <div class="contact-detail">
+            <div class="detail-icon">📍</div>
+            <div class="detail-text"><strong>Head Office</strong><span>10/1/2/1, Rajaji Nagar, Villivakkam, Chennai,
+                Tamil Nadu 600049</span></div>
+          </div>
+          <div class="contact-detail">
+            <div class="detail-icon">🕐</div>
+            <div class="detail-text"><strong>Working Hours</strong><span>10 am to 6:30 pm</span></div>
+          </div>
+          <div class="contact-detail">
+            <div class="detail-icon">🗺️</div>
+            <div class="detail-text"><strong>Service Areas</strong><span>All over Chennai</span></div>
+          </div>
+          <a href="https://maps.google.com/?q=10/1/2/1,+Rajaji+Nagar,+Villivakkam,+Chennai,+Tamil+Nadu+600049"
+            target="_blank" class="map-placeholder" style="text-decoration:none; color:inherit;">
+            <span>🗺️</span>
+            <span>Open in Google Maps</span>
+            <span style="font-size:0.8rem;color:var(--gray-500);text-align:center;">10/1/2/1, Rajaji Nagar, Villivakkam,
+              Chennai, Tamil Nadu 600049</span>
+          </a>
+        </div>
+        <div class="contact-form animate">
+          <h3 style="font-size:1.4rem;margin-bottom:8px;color:var(--gray-900);">Send Us a Message</h3>
+          <p style="font-size:0.875rem;margin-bottom:28px;">Fill in your details and we'll get back to you within 2
+            hours on business days.</p>
+          <form id="contactForm" onsubmit="handleSubmit(event)">
+            <div class="form-row">
+              <div class="form-group"><label for="name">Full Name *</label><input type="text" id="name"
+                  placeholder="Your full name" required /></div>
+              <div class="form-group"><label for="phone">Phone Number *</label><input type="tel" id="phone"
+                  placeholder="+91 XXXXX XXXXX" required /></div>
+            </div>
+            <div class="form-group"><label for="email">Email Address</label><input type="email" id="email"
+                placeholder="you@example.com" /></div>
+            <div class="form-group"><label for="service">Service Required *</label>
+              <select id="service" required>
+                <option value="">Select a service...</option>
+                <option>RO Water Purifier Installation</option>
+                <option>Filter / Membrane Replacement</option>
+                <option>Repair &amp; Servicing</option>
+
+                <option>Free Consultation</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="form-group"><label for="city">Your City</label><input type="text" id="city"
+                placeholder="e.g. Choolaimedu, Villivakkam..." /></div>
+            <div class="form-group"><label for="message">Message / Additional Details</label><textarea id="message"
+                placeholder="Tell us more about your requirement, purifier brand, current issue, etc."
+                style="min-height:140px;"></textarea></div>
+            <button type="submit" id="submitBtn" class="btn btn-primary"
+              style="width:100%;justify-content:center;font-size:1rem;">Send Message </button>
+            <div class="form-success" id="formSuccess">✅ Message sent! We'll contact you within 2 hours.</div>
+          </form>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="section" style="background:var(--gray-50);">
-  <div class="container" style="max-width:800px;">
-    <div class="section-header animate">
-      <div class="badge">FAQ</div>
-      <h2>Frequently Asked Questions</h2>
-    </div>
-    <div class="animate">
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">How quickly can you send a technician? <span class="faq-arrow">▼</span></div><div class="faq-a">For bookings before 12 noon, we offer same-day service. For emergency repairs, we aim to dispatch within 2–4 hours depending on your location.</div></div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Do you use genuine spare parts? <span class="faq-arrow">▼</span></div><div class="faq-a">Yes, always. We use only OEM (Original Equipment Manufacturer) parts sourced directly from authorised distributors. All parts come with a minimum 90-day warranty.</div></div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Which water purifier brands do you service? <span class="faq-arrow">▼</span></div><div class="faq-a">We service all major brands — Kent, Aquaguard, Pureit, Blue Star, LG PuriCare, A.O. Smith, Livpure, Havells, V-Guard, Tata Swach, and more.</div></div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What is included in an AMC plan? <span class="faq-arrow">▼</span></div><div class="faq-a">AMC plans include scheduled preventive services, filter checks, priority support, and free minor repairs depending on your plan tier (Basic, Standard, or Premium). Visit the Services page for full details.</div></div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Do you provide a service warranty? <span class="faq-arrow">▼</span></div><div class="faq-a">Yes. All repair and service work comes with a 30-day service warranty. Replaced parts carry a 90-day parts warranty. AMC clients get extended coverage as per their plan.</div></div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Which areas do you cover? <span class="faq-arrow">▼</span></div><div class="faq-a">We currently serve all over Chennai and its surrounding areas. Contact us to confirm availability in your area.</div></div>
-    </div>
-  </div>
-</section>
-
-<section class="cta-banner">
-  <div class="container">
-    <div class="cta-content">
-      <h2>Still Have Questions?</h2>
-      <p>Chat with us directly on WhatsApp for the fastest response.</p>
-      <div class="cta-buttons">
-        <a href="https://wa.me/919791913566?text=Hi%20MC%20Digital%20Solution%2C%20I%20have%20a%20question" target="_blank" class="whatsapp-btn" style="font-size:1rem;padding:16px 36px;"><svg viewBox="0 0 24 24" width="22" height="22" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> Chat on WhatsApp Now</a>
+  <section class="section" style="background:var(--gray-50);">
+    <div class="container" style="max-width:800px;">
+      <div class="section-header animate">
+        <div class="badge">FAQ</div>
+        <h2>Frequently Asked Questions</h2>
+      </div>
+      <div class="animate">
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">How quickly can you send a technician? <span
+              class="faq-arrow">▼</span></div>
+          <div class="faq-a">For bookings before 12 noon, we offer same-day service. For emergency repairs, we aim to
+            dispatch within 2–4 hours depending on your location.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">Do you use genuine spare parts? <span class="faq-arrow">▼</span>
+          </div>
+          <div class="faq-a">Yes, always. We use only OEM (Original Equipment Manufacturer) parts sourced directly from
+            authorised distributors. All parts come with a minimum 90-day warranty.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">Which water purifier brands do you service? <span
+              class="faq-arrow">▼</span></div>
+          <div class="faq-a">We service all major brands — Kent, Aquaguard, Pureit, Blue Star, LG PuriCare, A.O. Smith,
+            Livpure, Havells, V-Guard, Tata Swach, and more.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">What is included in an AMC plan? <span class="faq-arrow">▼</span>
+          </div>
+          <div class="faq-a">AMC plans include scheduled preventive services, filter checks, priority support, and free
+            minor repairs depending on your plan tier (Basic, Standard, or Premium). Visit the Services page for full
+            details.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">Do you provide a service warranty? <span
+              class="faq-arrow">▼</span></div>
+          <div class="faq-a">Yes. All repair and service work comes with a 30-day service warranty. Replaced parts carry
+            a 90-day parts warranty. AMC clients get extended coverage as per their plan.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">Which areas do you cover? <span class="faq-arrow">▼</span></div>
+          <div class="faq-a">We currently serve all over Chennai and its surrounding areas. Contact us to confirm
+            availability in your area.</div>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<footer>
-  <div class="footer-main"><div class="container"><div class="footer-grid">
-    <div class="footer-brand"><a href="index.html" class="logo"><div class="logo-icon"><svg viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm0 18c-4.4 0-8-3.6-8-8s3.6-8 8-8 8 3.6 8 8-3.6 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z" fill="white"/></svg></div><div class="logo-text"><span class="brand">MC Digital Solution</span><span class="tagline">Water Purifier Experts</span></div></a><p>Pure water solutions across Tamil Nadu.</p></div>
-    <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="clients.html">Clients</a></li><li><a href="contact.html">Contact</a></li></ul></div>
-    <div class="footer-col"><h4>Services</h4><ul><li><a href="services.html">RO Installation</a></li><li><a href="services.html">Repair</a></li></ul></div>
-    <div class="footer-col"><h4>Contact</h4><ul class="footer-contact"><li><span>📞</span><span>+91 97919 13566</span></li><li><span>📧</span><span>lokesh@mcdigitalsolutions.in</span></li><li><span>📍</span><span>10/1/2/1, Rajaji Nagar, Villivakkam, Chennai, Tamil Nadu 600049</span></li></ul></div>
-  </div></div></div>
-  <div class="container"><div class="footer-bottom"><span>© 2025 MC Digital Solution. All rights reserved.</span><span>Designed with ❤️</span></div></div>
-</footer>
-<div class="whatsapp-float"><a href="https://wa.me/919791913566" target="_blank"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" fill="white"/></svg> WhatsApp Us</a></div>
-<script src="js/main.js"></script>
+  <section class="cta-banner">
+    <div class="container">
+      <div class="cta-content">
+        <h2>Still Have Questions?</h2>
+        <p>Chat with us directly on WhatsApp for the fastest response.</p>
+        <div class="cta-buttons">
+          <a href="https://wa.me/919791913566?text=Hi%20MC%20Digital%20Solution%2C%20I%20have%20a%20question"
+            target="_blank" class="whatsapp-btn" style="font-size:1rem;padding:16px 36px;"><svg viewBox="0 0 24 24"
+              width="22" height="22" fill="white">
+              <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+            </svg> Chat on WhatsApp Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-main">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand"><a href="index.html" class="logo">
+              <div class="logo-icon"><svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm0 18c-4.4 0-8-3.6-8-8s3.6-8 8-8 8 3.6 8 8-3.6 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"
+                    fill="white" />
+                </svg></div>
+              <div class="logo-text"><span class="brand">MC Digital Solution</span><span class="tagline">Water Purifier
+                  Experts</span></div>
+            </a>
+            <p>Pure water solutions across Tamil Nadu.</p>
+          </div>
+          <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="clients.html">Clients</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Services</h4>
+            <ul>
+              <li><a href="services.html">RO Installation</a></li>
+              <li><a href="services.html">Repair</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Contact</h4>
+            <ul class="footer-contact">
+              <li><span>📞</span><span>+91 97919 13566</span></li>
+              <li><span>📧</span><span>lokesh@mcdigitalsolutions.in</span></li>
+              <li><span>📍</span><span>10/1/2/1, Rajaji Nagar, Villivakkam, Chennai, Tamil Nadu 600049</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="footer-bottom"><span>© 2025 MC Digital Solution. All rights reserved.</span><span>Designed with
+          ❤️</span></div>
+    </div>
+  </footer>
+  <div class="whatsapp-float"><a href="https://wa.me/919791913566" target="_blank"><svg viewBox="0 0 24 24">
+        <path
+          d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+          fill="white" />
+      </svg> WhatsApp Us</a></div>
+  <script src="js/main.js"></script>
 </body>
+
 </html>
