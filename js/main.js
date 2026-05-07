@@ -72,9 +72,11 @@ async function handleSubmit(e) {
   }
 
   // Show loading
-  btn.textContent = 'Sending...';
-  btn.disabled = true;
-  btn.style.opacity = '0.7';
+  if (btn) {
+    btn.textContent = 'Sending...';
+    btn.disabled = true;
+    btn.style.opacity = '0.7';
+  }
 
   try {
     const response = await fetch(action, {
@@ -86,8 +88,10 @@ async function handleSubmit(e) {
     });
 
     if (response.ok) {
-      btn.textContent = 'Message Sent ✅';
-      btn.style.background = 'linear-gradient(135deg, #10b981, #059669)';
+      if (btn) {
+        btn.textContent = 'Message Sent ✅';
+        btn.style.background = 'linear-gradient(135deg, #10b981, #059669)';
+      }
       if (success) {
         success.style.display = 'block';
       }
@@ -95,10 +99,12 @@ async function handleSubmit(e) {
       
       // Reset button after delay
       setTimeout(() => {
-        btn.textContent = 'Send Message 🚀';
-        btn.disabled = false;
-        btn.style.opacity = '';
-        btn.style.background = '';
+        if (btn) {
+          btn.textContent = 'Send Message 🚀';
+          btn.disabled = false;
+          btn.style.opacity = '';
+          btn.style.background = '';
+        }
         if (success) success.style.display = 'none';
       }, 5000);
     } else {
@@ -108,15 +114,19 @@ async function handleSubmit(e) {
       } else {
         alert("Oops! There was a problem submitting your form");
       }
+      if (btn) {
+        btn.textContent = 'Send Message 🚀';
+        btn.disabled = false;
+        btn.style.opacity = '';
+      }
+    }
+  } catch (error) {
+    alert("Oops! There was a problem submitting your form");
+    if (btn) {
       btn.textContent = 'Send Message 🚀';
       btn.disabled = false;
       btn.style.opacity = '';
     }
-  } catch (error) {
-    alert("Oops! There was a problem submitting your form");
-    btn.textContent = 'Send Message 🚀';
-    btn.disabled = false;
-    btn.style.opacity = '';
   }
 }
 
